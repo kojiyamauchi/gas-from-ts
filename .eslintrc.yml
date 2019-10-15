@@ -1,0 +1,64 @@
+root: true
+env:
+  googleappsscript/googleappsscript: true
+  node: true
+  es6: true
+parser: "@typescript-eslint/parser"
+parserOptions:
+  tsconfigRootDir: "."
+  project: "./tsconfig.json"
+  sourceType: module
+plugins:
+  - "googleappsscript"
+  - "@typescript-eslint"
+  - prettier
+  - import
+settings:
+  "import/resolver":
+    webpack:
+      config: "webpack.config.babel.js"
+  node:
+    tryExtensions:
+      - ".js"
+      - ".ts"
+      - ".json"
+      - ".node"
+#
+#
+# Set Linting Rules Below.
+extends:
+  - "standard"
+  - "plugin:@typescript-eslint/recommended"
+  - "plugin:prettier/recommended"
+rules:
+  "prettier/prettier":
+    - error
+    - tabWidth: 2
+      trailingComma: none
+      singleQuote: true
+      semi: false
+      printWidth: 160
+  indent: off
+  "@typescript-eslint/indent":
+    - error
+    - 2
+  "@typescript-eslint/no-non-null-assertion": off
+  "@typescript-eslint/interface-name-prefix": off
+  "@typescript-eslint/no-namespace": off
+  "@typescript-eslint/member-delimiter-style": off
+  "max-classes-per-file":
+    - error
+    - 2
+  "no-bitwise":
+    - error
+    - allow:
+        - "~"
+  "import/order": off
+  "sort-keys": off
+  "no-multiple-empty-lines": off
+  "lines-between-class-members":
+    - error
+    - always
+    - exceptAfterSingleLine: true
+  "no-console": off
+  "unicorn/number-literal-case": off
