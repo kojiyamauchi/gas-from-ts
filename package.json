@@ -61,7 +61,7 @@
     ]
   },
   "scripts": {
-    "setup": "cpx appsscript.json deploy && rimraf appsscript.json",
+    "setup": "cpx appsscript.json deploy && rimraf appsscript.json && rimraf コード.js && rimraf deploy/.gitkeep",
     "build": "watch 'webpack' base",
     "deploy": "watch 'clasp push' deploy",
     "move": "cpx base/**.ts ../AddProjectDirName/gas",

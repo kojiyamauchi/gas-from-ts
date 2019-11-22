@@ -1,4 +1,4 @@
-# GAS from TypeScript Template. ☕️  
+# GAS from TypeScript Template. 🍵  
 ## Usage.  
 - Clone or Download This Repository.  
 - Initialize package.json  
