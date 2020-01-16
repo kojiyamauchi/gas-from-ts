@@ -8,7 +8,6 @@
 - Create or Clone GAS Project.
   - -> `clasp create` || `clasp clone 'Script ID'`  
 - Setup.  
-  - -> `cat .clasp.json | jq '.rootDir = "deploy"' .clasp.json | sponge .clasp.json`  
   - -> `yarn setup`  
 - Build Manually.
   - -> `webpack`  
@@ -17,7 +16,8 @@
 - Development. (When Saving Work Files, Build & Deploy Automatically.)  
   - -> `yarn dev`  
 - GAS API.
-  - -> <https://developers.google.com/apps-script/reference/base>
+  - -> <https://developers.google.com/apps-script/reference/base>  
+
 ー
 
 ### TODO Memo.
