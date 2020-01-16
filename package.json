@@ -13,6 +13,7 @@
     "@types/google-apps-script": "^1.0.7",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
+    "chokidar-cli": "^2.1.0",
     "cpx": "^1.5.0",
     "eslint": "^6.7.1",
     "eslint-config-import": "^0.13.0",
@@ -61,11 +62,10 @@
     ]
   },
   "scripts": {
-    "setup": "cpx appsscript.json deploy && rimraf appsscript.json && rimraf コード.js && rimraf deploy/.gitkeep",
-    "copy-details": "cpx base/**.ts ../AddProjectDirName/gas",
-    "build": "watch 'webpack' base",
-    "deploy": "watch 'clasp push' deploy",
-    "copy": "watch 'yarn copy-details' base",
+    "setup": "cpx appsscript.json deploy && rimraf appsscript.json && rimraf コード.js && rimraf deploy/.gitkeep && cat .clasp.json | jq '.rootDir = \"deploy\"' .clasp.json | sponge .clasp.json",
+    "build": "chokidar 'base/**/*.ts' -c 'webpack'",
+    "deploy": "chokidar 'deploy/**/*' -c 'clasp push'",
+    "copy": "chokidar 'base/**/*.ts' -c 'cpx base/**/*.ts ../AddProjectDirName/gas'",
     "dev": "npm-run-all -p build deploy copy",
     "check-pkg": "ncu",
     "update-pkg": "ncu '/^(?!(@typescript-eslint)).*$/' -u",
