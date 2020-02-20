@@ -62,7 +62,7 @@
     ]
   },
   "scripts": {
-    "setup": "cpx appsscript.json deploy && rimraf appsscript.json && rimraf コード.js && rimraf deploy/.gitkeep && cat .clasp.json | jq '.rootDir = \"deploy\"' .clasp.json | sponge .clasp.json",
+    "setup": "cat appsscript.json | jq '.runtimeVersion = \"V8\"' appsscript.json | sponge appsscript.json && cpx appsscript.json deploy && rimraf appsscript.json && rimraf コード.js && rimraf deploy/.gitkeep && cat .clasp.json | jq '.rootDir = \"deploy\"' .clasp.json | sponge .clasp.json",
     "build": "chokidar 'base/**/*.ts' -c 'webpack'",
     "deploy": "chokidar 'deploy/**/*' -c 'clasp push'",
     "copy": "chokidar 'base/**/*.ts' -c 'cpx base/**/*.ts ../AddProjectDirName/gas'",
