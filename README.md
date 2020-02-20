@@ -6,7 +6,7 @@
 - Install All Packages.  
   - -> `yarn install`  
 - Create or Clone GAS Project.
-  - -> `clasp create` || `clasp clone 'Script ID'`  
+  - -> `clasp create` || `clasp clone Script ID`  
 - Setup.  
   - -> `yarn setup`  
 - Build Manually.
