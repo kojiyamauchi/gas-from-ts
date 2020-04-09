@@ -46,6 +46,7 @@ rules:
   "@typescript-eslint/interface-name-prefix": off
   "@typescript-eslint/no-namespace": off
   "@typescript-eslint/member-delimiter-style": off
+  "@typescript-eslint/prefer-interface": off
   "max-classes-per-file":
     - error
     - 2
