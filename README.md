@@ -1,4 +1,4 @@
-# GAS from TypeScript Template. 🍵  
+# GAS from TypeScript Template.  
 ## Usage.  
 - Clone or Download This Repository.  
 - Initialize package.json  
@@ -17,11 +17,5 @@
   - -> `yarn dev`  
 - GAS API.
   - -> <https://developers.google.com/apps-script/reference/base>  
-
-ー
-
-### TODO Memo.
-- @typescript-eslint ver.2 Parse Doesn't Work. (on Terminal && on VSCode)
-  - <https://github.com/typescript-eslint/typescript-eslint/releases/tag/v2.0.0>
 
 🛹
